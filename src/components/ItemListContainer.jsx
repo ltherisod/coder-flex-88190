@@ -1,7 +1,7 @@
 const ItemListContainer = (props) => {
 return(
     <div>
-        <h1>{props.saludo}</h1>
+        <h1 className="text-danger">{props.saludo}</h1>
     </div>
 )
 }

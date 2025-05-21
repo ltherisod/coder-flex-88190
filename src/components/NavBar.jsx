@@ -8,7 +8,6 @@ const NavBar = () => {
             <a className="nav-link" href="">Nuevos</a>
             <a className="nav-link" href="">Ofertas</a>
             <a className="nav-link" href="">Mas vendidos</a>
-
             <CartWidget/>
         </nav>
     )

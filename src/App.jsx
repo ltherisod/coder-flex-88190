@@ -1,8 +1,11 @@
 import './App.css'
+//importar el css 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer'
 import NavBar from './components/NavBar'
 import ButtonMultiuso from "./examples/ButtonMultiuso"
 import Contador from './examples/Contador'
+import NavBarBootstrap from './components/NavBarBootstrap';
 function App() {
 //  const styles = {
 //   backgroundColor:'yellow',
@@ -17,7 +20,8 @@ function App() {
 
   return (
     <>
-    <NavBar/>
+    <NavBarBootstrap/>
+    {/* <NavBar/> */}
     <ItemListContainer saludo='Bienvenidos a mi app'/>
      {/* <Contador/>
       <ButtonMultiuso texto={'Hace Click!'} styles={styles} handler={saludar}/>
