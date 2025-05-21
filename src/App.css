@@ -1,0 +1,11 @@
+*{
+  margin:0;
+  padding: 0; 
+  box-sizing:border-box ;
+}
+
+.mi-boton{
+  background-color: coral;
+  padding: 1rem;
+  border-radius: 10%;
+}
