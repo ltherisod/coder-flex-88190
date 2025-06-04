@@ -50,3 +50,16 @@ export const getProducts = () =>{
         },3000)
     })
 }
+export const getOneProduct = (id) =>{
+    let error = false
+    return new Promise ((resolve, reject)=>{
+        setTimeout(()=>{
+            if(error){
+                reject('Hubo un error')
+            }else{
+                let product= productos.find((prod)=> prod.id === id)
+                resolve(product)
+            }
+        },3000)
+    })
+}
