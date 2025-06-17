@@ -7,8 +7,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage';
 function App() {
 
-  //En App configuramos y definimos las rutas de la App
-
   return (
     <BrowserRouter>
     <NavBarBootstrap/>

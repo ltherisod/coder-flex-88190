@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { getProducts } from "../mock/AsyncMock"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
-import Input from "../examples/Input"
+
 
 const ItemListContainer = (props) => {
     const[data, setData]= useState([])
@@ -25,7 +25,6 @@ const ItemListContainer = (props) => {
 
 return(
     <div>
-        {/* <Input/> */}
         <h1 className="text-danger">{props.saludo}</h1>
         <ItemList data={data}/>
     </div>
