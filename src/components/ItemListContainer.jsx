@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import { getProducts } from "../mock/AsyncMock"
+import { getProducts, productos } from "../mock/AsyncMock"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 import LoaderComponent from "./LoaderComponent"
-import { collection, getDocs, query, where } from "firebase/firestore"
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../service/firebase"
 
 
@@ -35,11 +35,6 @@ const ItemListContainer = (props) => {
         .finally(()=> setLoading(false))
     },[categoryId])
 
-
-
-
-
-
     // console.log(categoryId)
     //PROMESA MOCK LOCAL
     // useEffect(()=>{
@@ -57,9 +52,17 @@ const ItemListContainer = (props) => {
     //     .catch((error)=> console.log(error))
     //     .finally(()=> setLoading(false))
     // },[categoryId])
+//UNA SOLA VEZ  
+    // const subirData = () => {
+    //         console.log('click!')
+
+    //     const collectionAgregar = collection(db, "products")
+    //     productos.map((prod) => addDoc(collectionAgregar, prod))
+    // }
 
 return(
     <>
+    {/* <button onClick={subirData}>Subir prods</button> */}
     {
         loading 
         ? <LoaderComponent/> 

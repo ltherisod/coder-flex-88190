@@ -8,6 +8,7 @@ import ErrorPage from './components/ErrorPage';
 //para dar acceso a los componentes
 import { CartProvider } from './context/CartContext';
 import CartContainer from './components/CartContainer';
+import Checkout from './components/Checkout';
 function App() {
 //envuelvo los componentes para que tengan acceso
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path='/category/:categoryId' element={ <ItemListContainer saludo='Estas en la categoria:'/>}/>
       <Route path='/item/:id' element={<ItemDetailContainer/>}/>
       <Route path='/cart' element={<CartContainer/>}/>
+      <Route path='/checkout' element={<Checkout/>}/>
       <Route path='*' element={<ErrorPage/>}/>
     </Routes>
     </CartProvider>

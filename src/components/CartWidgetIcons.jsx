@@ -3,12 +3,12 @@ import { Badge } from "react-bootstrap";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 const CartWidgetIcons = () => {
-    const {cart}= useContext(CartContext)
-    console.log(cart)
+    const {cartQuantity}= useContext(CartContext)
+   
     return(
         <div>
             < MdOutlineShoppingCart fontSize={'1.3rem'} />
-             <Badge bg="danger">{5}</Badge>
+             <Badge bg="danger">{cartQuantity()}</Badge>
         </div>
     )
 }

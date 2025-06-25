@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
+import { Link } from 'react-router-dom'
 
 const CartView = () => {
-    const {cart, clear, removeItem}= useContext(CartContext)
+    const {cart, clear, removeItem, cartTotal}= useContext(CartContext)
   return (
     <div>
         <h2>Tu carrito 🛒</h2>
@@ -24,10 +25,10 @@ const CartView = () => {
             }
         </div>
         {/* mostar el total a pagar */}
-        <span>Total a pagar:$</span>
+        <span>Total a pagar:${cartTotal()} </span>
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'80%', padding:'2rem'}}>
             <button className='btn btn-danger' onClick={clear}> Vaciar carrito</button>
-            <button className='btn btn-success'>Terminar Compra</button>
+            <Link className='btn btn-success' to='/checkout'>Terminar Compra</Link>
         </div>
     </div>
   )

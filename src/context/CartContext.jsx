@@ -65,15 +65,21 @@ const isInCart= (id) =>{
 }
 
 //cantidad de items (sumar cantidades)
-
+const cartQuantity = ()=>{
+    return cart.reduce((acc, prod)=> acc += prod.quantity,0)
+}
 
 //total a pagar
+
+const cartTotal = () =>{
+    return cart.reduce((acc, prod)=> acc += prod.price * prod.quantity,0)
+}
 
 // const contextValue ={
 //     cart,
 // }
     return(
-        <CartContext.Provider value={{cart, addItem, removeItem, clear}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clear, cartTotal, cartQuantity}}>
             {children}
         </CartContext.Provider>
     )
